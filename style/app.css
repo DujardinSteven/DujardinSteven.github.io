@@ -1,0 +1,251 @@
+/*   RESET CSS   */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*   FONTS   */
+@font-face {
+    font-family:"DIN-CondensedMed";
+    src: url('../static/fonts/Marvel.woff') format('woff'), url('../static/fonts/Marvel.woff2') format('woff'), url('../static/fonts/Marvel.ttf') format('truetype');
+}
+
+/*   OWN CSS   */
+.html, body{
+    width: 100%;
+    background-color: #F0EFF5;
+    font-family: 'DIN-CondensedMed', Fallback, sans-serif;
+}
+.header{
+    background-color: #22262A;
+    padding: 0 5%;
+    margin-bottom: 18px;
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 90%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+
+    z-index: 2;
+}
+.header_logo{
+    height: 100%;
+}
+.main{
+    margin-top: 60px;
+}
+.main_cards{
+    margin: 0 5%;
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.loader_center{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.card_char{
+    background-color: white;
+    border-radius: 15px;
+    height: 225px;
+    box-shadow: 0 4px 8px 0 #DFDFDF, 0 6px 20px 0 #DFDFDF;
+    width: 100%;
+
+    margin: 15px 0;
+
+    display: flex;
+    align-content: center;
+    font-family: 'DIN-CondensedMed', Fallback, sans-serif;
+}
+.card_char_pic{
+    height: 100%;
+    width: 45%;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+
+    -webkit-filter: grayscale(0.3);
+    filter: grayscale(0.3);
+    z-index: 1;
+}
+
+.card_char_info{
+    padding: 5% 5%;
+    width: 50%;
+}
+
+.info_title{
+    font-size: 1.5rem;
+}
+
+.info_desc{
+    font-size: 1rem;
+    color: dimgray;
+    padding: 25px 0 45px;
+}
+.info_button{
+    background-color: #D8232A;
+    color: white;
+    width: 80%;
+    height: 25px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'DIN-CondensedMed', Fallback, sans-serif;
+    font-size: 1.2rem;
+}
+
+.loader {
+    border: 7px solid #f3f3f3; /* Light grey */
+    border-top: 7px solid #D8232A; /* Blue */
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    animation: spin 0.5s linear infinite;
+    margin-top: 200px;
+}
+h3{
+    font-size: 1.3rem;
+    margin-bottom: 5%;
+    width: 100%;
+    text-align: center;
+}
+
+.left{
+    padding-left: 5%;
+    width: 90%;
+}
+
+.right{
+
+    padding-top: 5%;
+    width: 90%;
+    text-align: center;
+}
+.model_content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+@media screen and (min-width: 540px){
+    .card_char{
+        width: 45%;
+    }
+
+    .main_cards{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+    .left{
+        padding-left: 5%;
+        width: 90%;
+    }
+
+    .right{
+
+        padding-top: 5%;
+        width: 90%;
+        text-align: center;
+    }
+    h3{
+        font-size: 1.3rem;
+        margin-bottom: 5%;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1050px){
+    .card_char{
+        width: 30%;
+    }
+
+    .main_cards{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+    }
+    .left{
+        width: 30%;
+    }
+
+    .right{
+        padding-left: 5%;
+        width: 65%;
+        text-align: left;
+    }
+    h3{
+        font-size: 1.3rem;
+        margin-bottom: 5%;
+        width: 100%;
+        text-align: left;
+    }
+}
+
